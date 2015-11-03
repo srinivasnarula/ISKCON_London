@@ -1,0 +1,75 @@
+﻿@model ISKON_VyasaPuja.Models.VyasaPuja
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<script type="text/javascript"
+        src="~/Scripts/jscripts/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" language="javascript">
+    tinyMCE.init({
+        // General options
+        mode: "textareas",
+        theme: "advanced",
+        plugins: "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups",
+    });
+</script>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>VyasaPuja</legend>
+
+        @Html.HiddenFor(model => model.Vyasapujaid)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Description, new { style = "width:1000px;height:500px" })
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        @*<div class="editor-label">
+            @Html.LabelFor(model => model.AlphabetFirstLetter)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AlphabetFirstLetter)
+            @Html.ValidationMessageFor(model => model.AlphabetFirstLetter)
+        </div>*@
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
