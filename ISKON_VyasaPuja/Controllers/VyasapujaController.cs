@@ -16,8 +16,9 @@ namespace ISKON_VyasaPuja.Controllers
         //
         // GET: /Vyasapuja/
 
-        public ActionResult Index()
+        public ActionResult Index(string year)
         {
+
             return View(db.VyasaPujas.ToList());
         }
 
@@ -51,8 +52,10 @@ namespace ISKON_VyasaPuja.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.VyasaPujas.Add(vyasapuja);
                 vyasapuja.AlphabetFirstLetter = vyasapuja.FirstName.Substring(0, 1);
+                DateTime dtYear = DateTime.Now;
+                vyasapuja.Year = dtYear.Year.ToString();
+                db.VyasaPujas.Add(vyasapuja);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

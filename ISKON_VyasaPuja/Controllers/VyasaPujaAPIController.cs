@@ -17,9 +17,16 @@ namespace ISKON_VyasaPuja.Controllers
         private VyasapujaContext db = new VyasapujaContext();
 
         // GET api/VyasaPujaAPI
-        public IEnumerable<VyasaPuja> GetVyasaPujas()
+        public IEnumerable<VyasaPuja> GetVyasaPujas(string year)
         {
-            return db.VyasaPujas.AsEnumerable();
+            var _dbList = db.VyasaPujas.ToList();
+            var _filteredList = from list in _dbList
+                                where list.Year == year
+                                select list;
+
+            return _filteredList.ToList();
+
+            //return db.VyasaPujas.ToList();
         }
 
         // GET api/VyasaPujaAPI/5

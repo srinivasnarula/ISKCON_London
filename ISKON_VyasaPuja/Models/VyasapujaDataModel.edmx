@@ -15,6 +15,7 @@
           <Property Name="Email" Type="varchar" MaxLength="100" />
           <Property Name="Description" Type="varchar(max)" />
           <Property Name="AlphabetFirstLetter" Type="char" MaxLength="5" />
+          <Property Name="Year" Type="nvarchar" MaxLength="4" />
         </EntityType>
         <EntityContainer Name="ModelsStoreContainer">
           <EntitySet Name="VyasaPuja" EntityType="Self.VyasaPuja" Schema="dbo" store:Type="Tables" />
@@ -33,6 +34,7 @@
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="AlphabetFirstLetter" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="Year" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="VyasapujaContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="VyasaPujas" EntityType="Self.VyasaPuja" />
@@ -46,6 +48,7 @@
           <EntitySetMapping Name="VyasaPujas">
             <EntityTypeMapping TypeName="Models.VyasaPuja">
               <MappingFragment StoreEntitySet="VyasaPuja">
+                <ScalarProperty Name="Year" ColumnName="Year" />
                 <ScalarProperty Name="Vyasapujaid" ColumnName="Vyasapujaid" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />

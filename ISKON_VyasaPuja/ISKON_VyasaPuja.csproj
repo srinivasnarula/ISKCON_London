@@ -466,7 +466,6 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\iskconvyasapuja - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\iskconvyasapuja - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\iskconvyasapuja.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

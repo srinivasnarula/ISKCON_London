@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\net5-77\Documents\GitHubVisualStudio\ISKON_VyasaPuja\ISKON_VyasaPuja\Models\VyasapujaDataModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Git-Charity\ISKCON_London\ISKON_VyasaPuja\Models\VyasapujaDataModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

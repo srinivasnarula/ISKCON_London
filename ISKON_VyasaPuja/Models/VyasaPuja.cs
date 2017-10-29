@@ -20,5 +20,6 @@ namespace ISKON_VyasaPuja.Models
         public string Email { get; set; }
         public string Description { get; set; }
         public string AlphabetFirstLetter { get; set; }
+        public string Year { get; set; }
     }
 }
